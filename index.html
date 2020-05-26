@@ -71,7 +71,7 @@
     }
 
     function onMouseDown(event){
-        var index=parseInt(event.point.y)%26;
+        var index=parseInt(event.point.y+event.point.x)%26;
         var character=characters[index];
        // console.log({index,character});
         if(keyData[character]){
