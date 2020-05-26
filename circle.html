@@ -50,6 +50,10 @@ for(var i=50;i<=1050;i+=100){
     }
     function onTouchStart(event){
         console.log('screen touched');
+        var maxPoint=new Point(view.size.width,view.size.height);
+        var initRadomPoint=Point.random();
+        var randomPoint=initRadomPoint*maxPoint;
+        var randomCircle=new Path.Circle({center:randomPoint,radius:10,fillColor:'orange'});
     }
 </script>
 
