@@ -27,7 +27,7 @@
 
 
 
- <script src="./paper-full.min.js">
+ <script src="./paper-full.js">
     
 </script> 
 <script src="keydata.js"></script>  
@@ -69,6 +69,24 @@
         }
         
     }
+
+    function onMouseDown(event){
+        var index=parseInt(event.point.y)%26;
+        var character=characters[index];
+       // console.log({index,character});
+        if(keyData[character]){
+            keyData[character].sound.play();
+            console.log('mouse click or touch');
+            var maxPoint=new Point(view.size.width,view.size.height);
+            var initRadomPoint=Point.random();
+            var randomPoint=initRadomPoint*maxPoint;
+            var randomCircle=new Path.Circle({center:randomPoint,radius:500,fillColor:keyData[character].color});
+            circles.push(randomCircle);
+
+        }
+        
+    }
+
     function onFrame(event){
         //code for line animation
         var vector = new Point({

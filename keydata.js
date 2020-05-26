@@ -157,3 +157,12 @@ var keyData = {
         color: '#2c3e50'
     }
 }
+characters=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+// instruction message for user
+if(document.body.clientWidth<600){
+    alert('click on differnt spots of screen to play diffent music and trigger aninmations');
+}
+else{
+    alert('use keyboard to play diffent music and trigger aninmations');
+}

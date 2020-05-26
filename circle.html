@@ -50,6 +50,7 @@ for(var i=50;i<=1050;i+=100){
     }
     function onMouseDown(event){
         console.log('screen touched');
+        console.log(parseInt(event.point.y));
         var maxPoint=new Point(view.size.width,view.size.height);
         var initRadomPoint=Point.random();
         var randomPoint=initRadomPoint*maxPoint;
